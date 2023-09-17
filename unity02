@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class Exercise01 : Monohaviour
 {
     private void Awake()
@@ -13,5 +11,16 @@ public class Exercise01 : Monohaviour
         Debug.Log("float Data : " + floatValue02);
         Debug.Log("double Data : " + doubleValue);
         Debug.Log("decimal Data : " + decimalValue);
+
+
+        object vauleInt = 31;
+        object valueFloat = 31.4159265358979f;
+        object valueString = "객체지향 프로그래밍";
+        object valueBool = false;
+
+        Debug.Log("정수 : " + vauleInt);
+        Debug.Log("실수 : " + valueFloat);
+        Debug.Log("문자열 : " + valueFloat);
+        Debug.Log("논리 : " + valueBool);
     }
 }
