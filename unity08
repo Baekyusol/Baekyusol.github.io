@@ -1,0 +1,39 @@
+using System;
+using UnityEngine;
+
+public class Exercise01 : Monohaviour
+{
+    [SerializeField]
+    private int x = 10;
+
+    private void Awake()
+    {
+        /* 1. for
+        for(int index = 0; index < 10; index)
+        {
+            Debug.Log(index);
+        }
+
+        for(int x = 1; x < 10; ++x)
+        {
+            for (int y = 1; y < 10; ++y)
+            {
+                Debug.Log($"{x} x {y} = {x * y}");
+            }
+        }
+        */
+
+        /* 2. while
+        int result = 0;
+        int index = 1;
+
+        while(index <= 100)
+        {
+            result += index;
+            index++;
+        }
+
+        Debug.Log($"1부터 100까지의 합은 {result}");
+        */
+    }
+}
