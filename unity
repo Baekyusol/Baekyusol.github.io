@@ -1,0 +1,17 @@
+using UnityEngine;
+
+public class Exercise01 : Monohaviour
+{
+    private void Awake()
+    {
+        float floatValue01 = 3.141592653589793238462643383279f;
+        float floatValue02 = 31.41592653589793238462643383279f;
+        double doubleValue = 3.141592653589793238462643383279;
+        decimal decimalValue = 3.141592653589793238462643383279m;
+
+        Debug.Log("float Data : " + floatValue01);
+        Debug.Log("float Data : " + floatValue02);
+        Debug.Log("double Data : " + doubleValue);
+        Debug.Log("decimal Data : " + decimalValue);
+    }
+}
