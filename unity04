@@ -1,0 +1,68 @@
+using UnityEngine;
+
+public class Exercise01 : Monohaviour
+{
+    enum PlayerState { Idle, Move, Attack }
+
+    private void Awake()
+    {
+        /* 1. 상수
+        const int PlayerIdle = 0;
+        const int PlayerMove = 1;
+        const int PlayerAttack = 2;
+
+        int playerState = PlayerAttack;
+
+        switch(playerState)
+        {
+            case PlayerIdle:
+                Debug.Log("플레이어 상태 : 대기");
+                break;
+            case PlayerMove:
+                Debug.Log("플레이어 상태 : 이동");
+                break;
+            case PlayerAttack:
+                Debug.Log("플레이어 상태 : 공격");
+                break;
+        }
+        */
+
+        /* 2. 열거형
+        PlayerState playerState = PlayerState.Idle;
+
+        switch (playerState)
+        {
+            case PlayerState.Idle:
+                Debug.Log("플레이어 상태 : 대기");
+                break;
+            case PlayerState.Move:
+                Debug.Log("플레이어 상태 : 이동");
+                break;
+            case PlayerState.Attack:
+                Debug.Log("플레이어 상태 : 공격");
+                break;
+        }
+        */
+
+        //강한, 약한 형식 검사
+        //Nullable
+        int? intValue;
+
+        intValue = null;
+        Debug.Log(intValue.HasValue);
+        //Debug.Log(intValue.Value); //현재 intValue가 null이기 때문에 값을 출력하면 에러 발생
+
+        intValue = 30;
+        Debug.Log(intValue.HasValue);
+        Debug.Log(intValue.Value);
+
+        //var
+        var valueInt = 33;
+        var valueFloat = 33.4567f;
+        var valueString = "문자열";
+
+        Debug.Log("정수 : " + valueInt);
+        Debug.Log("실수 : " + valueFloat);
+        Debug.Log("문자열 : " +  valueString);
+    }
+}
