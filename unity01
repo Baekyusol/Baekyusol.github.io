@@ -1,0 +1,76 @@
+using UnityEngine;
+
+public class Exercise01 : Monohaviour
+{
+    /* 1.
+    private int value01;
+
+    private int value02, value03, value04;
+        
+    private int value05 = 10;
+    private int value06 = 10, value07 = 20, value08 = 30;
+
+    private void Awake()
+    {
+        value01 = 1;
+        value02 = 2;
+        value03 = 3;
+        value04 = 4;
+    }
+    */
+     /* 2.
+    private int currentHP = 10;
+    private readonly int maxHP = 100;
+    private const int maxHP = 100;
+
+    public Exercise00()
+    {
+        maxHP = 200;
+    }
+
+    private void Awake()
+    {
+        int currentHP = 50;
+
+        currentHP = 35;
+
+        Debug.Log(currentHP);
+        Debug.Log(currentHP);
+        Debug.Log(maxHP);
+    }
+
+    private void Update()
+    {
+        //currentHP = 100;
+    }
+     */
+
+    
+}
+
+public class Player : MonoBehaviour
+{
+    public string playerName = "Noname";
+    private int currentHP = 100;
+
+    public void TakeDamage(int damage)
+    {
+        currentHP -= damage;
+
+        Debug.Log(currentHP);
+    }
+}
+
+public class GameSystem : MonoBehaviour
+{
+    public void Awake()
+    {
+        Player player;
+
+        player = GameSystem.Find("PlayerObject").GetComponent<Player>();
+
+        player.playerName = "고박사";
+        player.TakeDamage(10);
+
+    }
+}
